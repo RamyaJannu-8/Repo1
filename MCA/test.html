@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<head>
+    <title>scope of variable</title>
+    <script>
+        let globalVar="I am Global"; //global variable
+        function testScope()
+        {
+            let functionVar=" I am inside a function"; //function scope
+        if(true)
+        {
+            let blockVar="I am inside if block"; //block scope
+            console.log(blockVar); // works
+        }
+        console.log(functionVar); //works
+        //console.log(blockVar); // Error:cannot access blockVar outside its block
+        }
+        testScope();
+        console.log(globalVar); //works(global variable)
+        //console.log(functionVar); //Error:cannot access functionVar outside the function
+    </script>
+</head>
+<body>
+    <p>Demonstrating the scope of variables in javascript</p>
+</body>
+</html>
